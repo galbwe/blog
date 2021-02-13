@@ -1,0 +1,1 @@
+gcloud compute ssh $GHOST_COMPUTE_ENGINE_INSTANCE
