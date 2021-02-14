@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ghost": "docker run --rm --name ghost-dev -e url=http://localhost:2368 -p 2368:2368 ghost",
+    "ghost": "./scripts/start-ghost.sh",
+    "stop-ghost": "./scripts/stop-ghost.sh",
     "ssh": "./scripts/vm-ssh.sh"
   },
   "author": "Wes Galbraith",
