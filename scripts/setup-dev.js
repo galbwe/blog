@@ -13,7 +13,6 @@ const adminApi = GhostAdminApi({
     "version": "v3",
 })
 
-
 function createSiteOwner(baseUrl, callback) {
   console.log("In createSiteOwner")
   const url = baseUrl + "/ghost/api/v3/admin/authentication/setup/";
@@ -52,7 +51,6 @@ function createSession(baseUrl, callback) {
     }
     const headers = {
         'Content-Type': 'application/json',
-        Cookie: "ghost-admin-api-session=s%3AaZF6vitKnfA3Du5BoD8l9DXon1NWHWPx.IR8CPKQH294Z2hYY8dGW9xHsJ2N68RTShiq2stQSKXQ;",
     }
     const options = {
         method: 'POST',
