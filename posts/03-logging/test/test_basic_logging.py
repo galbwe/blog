@@ -11,4 +11,3 @@ def test_example_01(mocker):
 
     mock_warning.assert_called()
     mock_info.assert_called()
-    assert False
