@@ -2,13 +2,15 @@ import logging
 import sys
 from functools import lru_cache
 
-from .dict_config import set_logging_config
+# from .dict_config import set_logging_config
+from .python_config import get_logger
 
 
-set_logging_config()
+# set_logging_config()
 
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
+logger = get_logger(__name__)
 
 
 @lru_cache()

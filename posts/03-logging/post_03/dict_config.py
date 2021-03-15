@@ -5,13 +5,7 @@ from typing import Dict, Iterable
 import yaml
 
 
-def load_environment_variable(variable_name: str):
-    try:
-        return os.environ[variable_name]
-    except KeyError:
-        raise EnvironmentError(
-            f'Could not load environment variable "{variable_name}", you may need to source your .env file.'
-        )
+from .config import load_environment_variable
 
 
 YAML_LOGGING_CONFIG = load_environment_variable("YAML_LOGGING_CONFIG")
