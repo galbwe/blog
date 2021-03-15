@@ -9,10 +9,12 @@ def load_environment_variable(variable_name: str):
     try:
         return os.environ[variable_name]
     except KeyError:
-        raise EnvironmentError(f'Could not load environment variable "{variable_name}", you may need to source your .env file.')
+        raise EnvironmentError(
+            f'Could not load environment variable "{variable_name}", you may need to source your .env file.'
+        )
 
 
-YAML_LOGGING_CONFIG = load_environment_variable('YAML_LOGGING_CONFIG')
+YAML_LOGGING_CONFIG = load_environment_variable("YAML_LOGGING_CONFIG")
 
 
 def parse_yaml(stream: Iterable) -> Dict:
@@ -24,7 +26,7 @@ def parse_yaml(stream: Iterable) -> Dict:
 
 
 def set_logging_config(config_file=YAML_LOGGING_CONFIG):
-    with open(config_file, 'r') as f:
+    with open(config_file, "r") as f:
         config = parse_yaml(f.read())
     logging.config.dictConfig(config)
 
