@@ -6,12 +6,32 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ghost": "docker run --rm --name ghost-dev -e url=http://localhost:2368 -p 2368:2368 ghost",
-    "ssh": "./scripts/vm-ssh.sh"
+    "ssh": "./scripts/vm-ssh.sh",
+    "format": "prettier --write \"src/**/*.{js,html}\"",
+    "frontend": "parcel frontend/index.html"
   },
   "author": "Wes Galbraith",
   "license": "ISC",
   "dependencies": {
+    "@reach/router": "^1.3.4",
     "@tryghost/admin-api": "^1.3.8",
-    "@tryghost/content-api": "^1.4.14"
+    "@tryghost/content-api": "^1.4.14",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/preset-react": "^7.12.13",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1"
   }
 }
