@@ -1,7 +1,7 @@
 import pytest
 
 
-from post_03.fibonacci import fibonacci
+from post_02.fibonacci import fibonacci
 
 
 @pytest.mark.parametrize("n, expected", [

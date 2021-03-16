@@ -3,8 +3,8 @@ import logging.config
 import pytest
 from pytest_mock import mocker
 
-import post_03.dict_config as dict_config
-from post_03.dict_config import parse_yaml, set_logging_config
+import post_02.dict_config as dict_config
+from post_02.dict_config import parse_yaml, set_logging_config
 
 
 @pytest.fixture

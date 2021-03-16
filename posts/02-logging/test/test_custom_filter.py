@@ -2,7 +2,7 @@ import logging
 
 import pytest
 
-from post_03.custom_filter import _get_int_from_message
+from post_02.custom_filter import _get_int_from_message
 
 
 @pytest.mark.parametrize("message, expected", [

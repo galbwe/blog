@@ -1,6 +1,6 @@
 from pytest_mock import mocker
 
-import post_03.basic_logging as basic_logging
+import post_02.basic_logging as basic_logging
 
 
 def test_example_01(mocker):
