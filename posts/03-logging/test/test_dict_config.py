@@ -20,6 +20,8 @@ def yaml_file_contents():
             - 2
             - 3
             - hello
+        filter:
+            (): module_name
     """
 
 
@@ -33,6 +35,9 @@ def config_dict():
         },
         "int_key": 42,
         "list_key": [1, 2, 3, "hello"],
+        "filter": {
+            "()": "module_name",
+        },
     }
 
 

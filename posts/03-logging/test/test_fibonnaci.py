@@ -1,7 +1,7 @@
 import pytest
 
 
-from post_03.fibonnaci import fibonnaci
+from post_03.fibonacci import fibonacci
 
 
 @pytest.mark.parametrize("n, expected", [
@@ -15,4 +15,4 @@ from post_03.fibonnaci import fibonnaci
     (7, 21),
 ])
 def test_fibonnaci(n, expected):
-    assert fibonnaci(n) == expected
+    assert fibonacci(n) == expected

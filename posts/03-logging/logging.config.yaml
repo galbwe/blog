@@ -10,6 +10,7 @@ handlers:
     level: DEBUG
     formatter: simple
     stream: ext://sys.stdout
+    filters: [evens_only]
   rotatingfile:
     class: logging.handlers.RotatingFileHandler
     level: INFO
@@ -17,11 +18,15 @@ handlers:
     filename: loggymclogface.log
     maxBytes: 1024
     backupCount: 3
+    filters: [evens_only]
 loggers:
   simpleExample:
     level: DEBUG
     handlers: [console, rotatingfile]
     propagate: no
+filters:
+  evens_only:
+    (): post_03.custom_filter.FibonacciFilter
 root:
   level: DEBUG
   handlers: [console, rotatingfile]
